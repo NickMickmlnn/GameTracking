@@ -1,1 +1,2 @@
 Getting started
+Set `ENABLE_MOCK_DATA=false` in `api/.env` if you want to start the API without the mock Game Pass catalog so that only real catalog data appears once you add your own fetchers.

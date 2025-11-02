@@ -1,0 +1,72 @@
+[
+  {
+    "igdb_id": 135343,
+    "name": "Halo Infinite",
+    "service_title": "Halo Infinite",
+    "platforms": ["console", "pc", "cloud"],
+    "first_release_year": 2021
+  },
+  {
+    "igdb_id": 1942,
+    "name": "Forza Horizon 5",
+    "service_title": "Forza Horizon 5",
+    "platforms": ["console", "pc", "cloud"],
+    "first_release_year": 2021
+  },
+  {
+    "igdb_id": 7346,
+    "name": "Gears 5",
+    "service_title": "Gears 5",
+    "platforms": ["console", "pc", "cloud"],
+    "first_release_year": 2019
+  },
+  {
+    "igdb_id": 128384,
+    "name": "Sea of Thieves",
+    "service_title": "Sea of Thieves",
+    "platforms": ["console", "pc"],
+    "first_release_year": 2018
+  },
+  {
+    "igdb_id": 2004,
+    "name": "Hi-Fi RUSH",
+    "service_title": "Hi-Fi RUSH",
+    "platforms": ["console", "pc", "cloud"],
+    "first_release_year": 2023
+  },
+  {
+    "igdb_id": 191641,
+    "name": "Starfield",
+    "service_title": "Starfield",
+    "platforms": ["console", "pc"],
+    "first_release_year": 2023
+  },
+  {
+    "igdb_id": 29032,
+    "name": "Minecraft Dungeons",
+    "service_title": "Minecraft Dungeons",
+    "platforms": ["console", "pc", "cloud"],
+    "first_release_year": 2020
+  },
+  {
+    "igdb_id": 7341,
+    "name": "Grounded",
+    "service_title": "Grounded",
+    "platforms": ["console", "pc", "cloud"],
+    "first_release_year": 2022
+  },
+  {
+    "igdb_id": 253544,
+    "name": "Pentiment",
+    "service_title": "Pentiment",
+    "platforms": ["console", "pc"],
+    "first_release_year": 2022
+  },
+  {
+    "igdb_id": 19565,
+    "name": "Deathloop",
+    "service_title": "Deathloop",
+    "platforms": ["console", "pc"],
+    "first_release_year": 2021
+  }
+]
