@@ -1,0 +1,3 @@
+# Ignore generated SQLite databases
+*.db
+*.db-journal
