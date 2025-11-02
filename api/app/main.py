@@ -9,6 +9,7 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
 from .database import db
+from .fetchers.gamepass import refresh_gamepass_us
 from .fetchers.mock_gamepass import refresh_mock_gamepass
 from .igdb_client import search_games
 
@@ -107,7 +108,11 @@ def startup() -> None:
         inserted = refresh_mock_gamepass()
         LOGGER.info("Loaded %s mock Game Pass entries", inserted)
     else:
-        LOGGER.info("Mock catalog seeding disabled; starting with empty catalog")
+        try:
+            inserted = refresh_gamepass_us()
+            LOGGER.info("Loaded %s Game Pass entries from live catalogue", inserted)
+        except Exception as exc:  # noqa: BLE001
+            LOGGER.warning("Unable to refresh live Game Pass catalogue on startup: %s", exc)
 
 
 @app.get("/health")
@@ -139,8 +144,13 @@ def search(q: str) -> Dict[str, object]:
 
 @app.post("/refresh")
 def refresh() -> Dict[str, object]:
-    if not _mock_data_enabled():
-        return {"status": "ok", "counts": {}}
+    if _mock_data_enabled():
+        inserted = refresh_mock_gamepass()
+        return {"status": "ok", "counts": {"gamepass": inserted}}
 
-    inserted = refresh_mock_gamepass()
+    try:
+        inserted = refresh_gamepass_us()
+    except Exception as exc:  # noqa: BLE001
+        LOGGER.error("Game Pass refresh failed: %s", exc)
+        raise
     return {"status": "ok", "counts": {"gamepass": inserted}}
