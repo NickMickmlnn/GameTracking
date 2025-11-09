@@ -1,2 +1,2 @@
 Getting started
-Set `ENABLE_MOCK_DATA=false` in `api/.env` to use the live Game Pass fetcher. Restart the FastAPI service (or hit `/refresh`) after updating your Twitch credentials and, optionally, `GAMEPASS_MARKET` / `GAMEPASS_LANGUAGE` to pull fresh catalog data directly from Microsoft.
+Set `ENABLE_MOCK_DATA=false` in `api/.env` to use the live Game Pass fetcher powered by [NikkelM/Game-Pass-API](https://github.com/NikkelM/Game-Pass-API). Restart the FastAPI service (or hit `/refresh`) after updating your Twitch credentials and, optionally, `GAMEPASS_MARKET`, `GAMEPASS_API_BASE_URL`, or `GAMEPASS_API_TIMEOUT` if you need to point at a self-hosted instance of that API.
